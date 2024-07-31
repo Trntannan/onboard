@@ -1,0 +1,111 @@
+:root {
+    /* --font-size-base: 16px; */
+    --font-size-h1: 50px;
+    --font-size-h2: 46px;
+    --font-size-h3: 38px;
+    --font-size-p: 25px;
+    --font-size-button: 15px;
+}
+
+body {
+    font-family: "recoleta", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.step {
+    display: none;
+}
+
+.completion {
+    display: none;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    font-size: var(--font-size-h2);
+    margin-top: 15px;
+}
+
+h3 {
+    color: #333;
+    margin: 0 auto;
+    font-size: var(--font-size-h3);
+}
+
+p, form {
+    font-size: var(--font-size-p);
+    margin-bottom: 6px;
+}
+
+select {
+    height: auto;
+    padding: 5px;
+    font-size: inherit;
+}
+
+a {
+    color: #007bff;
+}
+
+button {
+    font-size: var(--font-size-button);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #514473, #f588ae);
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+ol {
+    display: inline-block;
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: left;
+}
+
+li {
+    font-size: var(--font-size-p);
+    margin: 0 30px;
+}
+
+.macInstructions {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for smaller screens */
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+        
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Adjustments for larger screens */
+}

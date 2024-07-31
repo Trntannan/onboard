@@ -1,0 +1,14 @@
+{
+  "name": "onboarding",
+  "version": "1.0.0",
+  "description": "An onboarding app for take2.... trial",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trent Annan",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1"
+  }
+}

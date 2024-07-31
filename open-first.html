@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Onboarding</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="step1" class="step">
+                <h1>Welcome to the</h1>
+                <img src="images/take2logo.png" alt="Take2 Logo">
+                <h1>Student Onboarding Process!</h1>
+                <button onclick="nextStep()">Start</button>
+            </div>
+            <div id="step2" class="step">
+                <h2>Step 1:</h2>
+                <h3>Download Chrome Browser and sign-in.</h3>
+                <div class="lists">
+                    <ol>
+                        <li>Follow this link to the <a href="https://www.google.com/chrome" target="_blank">Chrome</a> website.</li>
+                        <li>Click "Download here" and follow the on-screen prompts.</li>
+                        <li>Find the downloaded file and double-click to install.</li>
+                        <li>After installation, open Chrome from your applications.</li>
+                        <li>Access Settings: Click the three-dot menu > "Settings".</li>
+                        <li>Scroll down, click "Sign in to Chrome," and enter the Gmail credentials you had just created.</li>
+                        <li>Choose what you want to sync, then click "Turn on".</li>
+                        <li>Enable Syncing (optional): Go to Settings > Sync and click "Sync".</li>
+                    </ol>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            <div id="step3" class="step">
+                <h2>Step 2:</h2>
+                <h3>Create An Email Address To Use As A Developer.</h3>
+                <p>Optionally you can use your personal email address or another existing email address (it is recommended that you start a new email address).</p>
+                <div class="lists">
+                    <ol>
+                        <li>Follow this link to the <a href="https://www.gmail.com" target="_blank">Gmail</a> website.</li>
+                        <li>Click "Create account", It's next to the sign-in option.</li>
+                        <li>Enter your name, desired email address, password, birthdate, and optionally your gender.</li>
+                        <li>Note down the Email address and Password you are about to create for later use.</li>
+                        <li>Google will send a code to your phone for verification.</li>
+                        <li>Accept Google's terms of service and privacy policy.</li>
+                        <li>Complete the CAPTCHA: Verify that you're not a robot.</li>
+                        <li>Click "Next".</li>
+                        <li>Your account is created!</li>
+                    </ol>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            <div id="step4" class="step">
+                <h2>Step 3:</h2>
+                <h3>Return to the folder you started from and double click on 'required software'.</h3>
+                <form id="osSelection">
+                    <label for="os">Select your operating system:</label>
+                    <select id="os" name="os">
+                        <option value="" selected disabled>Select OS</option>
+                        <option value="windows">Windows</option>
+                        <option value="mac">Mac</option>
+                    </select>
+                </form>
+                <div id="windowsInstructions" style="display: none;">
+                    <h3>To unzip for Windows:</h3>
+                    <div class="lists">
+                        <ol>
+                            <li>Right-click on the zipped folder named 'Windows'.</li>
+                            <li>Select "Extract All" from the submenu.</li>
+                            <li>Choose the extraction location: For now ignore this and just click 'extract'.</li>
+                            <li>Wait for the extraction to complete.</li>
+                            <li>There should now be a normal looking folder named 'Windows'.</li>
+                            <li>Double-click to open it.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="macInstructions" style="display: none;">
+                    <h3>To unzip for Mac:</h3>
+                    <div class="lists">
+                        <ol>
+                            <li>Double-click on the zipped folder named 'Mac'.</li>
+                            <li>The folder will automatically extract its contents.</li>
+                            <li>There should now be a normal looking folder named 'Mac'.</li>
+                            <li>Double-click to open it.</li>
+                        </ol>
+                    </div>
+                </div>
+                <button onclick="nextStep()" id="nextButton" class="disabled" disabled>Next</button>
+            </div>
+            <div id="step5" class="step">
+                <h2>Step 3.1: Install Slack</h2>
+            
+                <div id="windowsInstructions">
+                    <h3>Windows</h3>
+                    <p>Right-click on the Slack installer, this will open a context menu.</p>
+                    <p>From inside this menu select "Run As Administrator".</p>
+                    <p>The installation wizard will begin. Follow the on-screen instructions to install Slack.</p>
+                </div>
+                <div id="macInstructions" style="display: none;">
+                    <h3>Mac</h3>
+                    <p>Right-click on the Slack installer, this will open a context menu. From inside this menu select "Open".</p>
+                    <p>The installation process will start. Follow the on-screen instructions to install Slack.</p>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            
+            <div id="step6" class="step">
+                <h2>Step 3.2: Install VSCode (Visual Studio Code)</h2>
+                <div id="windowsInstructions">
+                    <h3>Windows</h3>
+                    <p>Right-click on the VSCode installer, this will open a context menu.</p>
+                    <p>From inside this menu select "Run As Administrator".</p>
+                    <p>The installation wizard will begin. Follow the on-screen instructions to install VSCode.</p>
+                </div>
+                <div id="macInstructions" style="display: none;">
+                    <h3>Mac</h3>
+                    <div class="lists">
+                        <ol>
+                            <li>Double-click on the zipped folder named 'VSCode-mac-universal'.</li>
+                            <li>The folder will automatically extract its contents.</li>
+                            <li>There should now be a normal looking folder named 'Visual Studio Code.app'.</li>
+                            <li>Right-click and select 'Run??'.</li>
+                        </ol>
+                    </div>                    
+                    <p>Right-click on the VSCode installer, this will open a context menu. From inside this menu select "Open".</p>
+                    <p>The installation process will start. Follow the on-screen instructions to install VSCode.</p>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            <div id="step7" class="step">
+                <h2>Step 3.3: Install Node</h2>
+            
+                <div id="windowsInstructions">
+                    <h3>Windows</h3>
+                    <p>Right-click on the Node installer, this will open a context menu.</p>
+                    <p>From inside this menu select "Run As Administrator".</p>
+                    <p>The installation wizard will begin. Follow the on-screen instructions to install Node.</p>
+                </div>
+                <div id="macInstructions" style="display: none;">
+                    <h3>Mac</h3>
+                    <p>Right-click on the Node installer, this will open a context menu. From inside this menu select "Open".</p>
+                    <p>The installation process will start. Follow the on-screen instructions to install Node.</p>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            <div id="step8" class="step">
+                <h2>Step 3.4: Install Git</h2>
+            
+                <div id="windowsInstructions">
+                    <h3>Windows</h3>
+                    <p>Right-click on the Git installer, this will open a context menu.</p>
+                    <p>From inside this menu select "Run As Administrator".</p>
+                    <p>The installation wizard will begin. Follow the on-screen instructions to install Git.</p>
+                </div>
+                <div id="macInstructions" style="display: none;">
+                    <h3>Mac</h3>
+                    <p>Right-click on the Git installer, this will open a context menu. From inside this menu select "Open".</p>
+                    <p>The installation process will start. Follow the on-screen instructions to install Git.</p>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            
+            <div id="step9" class="step">
+                <h2>Step 4:</h2>
+                <h3>Follow these steps to sign up for a GitHub account:</h3>
+                <div class="lists">
+                    <ol>
+                        <li>Follow this link to the <a href="https://github.com/join" target="_blank">Github</a> website.</li>
+                        <li>Once the page loads, you’ll see a green button labeled "Sign up for GitHub" on the right side of the page. Click on it.</li>
+                        <li>Enter a unique username, your email address, and a strong password.</li>
+                        <li>GitHub will send you a verification email to the address you provided. Open the email and click on the verification link.</li>
+                        <li>Select the free plan (recommended) or a paid plan based on your needs (you can ignore this for now).</li>
+                        <li>Complete the CAPTCHA: Verify that you're not a robot.</li>
+                        <li>Set up your profile (optional): Add a profile picture, bio, and any other information you'd like to share.</li>
+                        <li>Once you're signed up, you can start using GitHub for version control, collaboration, and more!</li>
+                    </ol>
+                </div>
+                <button onclick="nextStep()">Next</button>
+            </div>
+            <div id="step10" class="step">
+                <h2>Step 5:</h2>
+                <h3>Follow these steps to join FreeCodeCamp:</h3>
+                <div class="lists">
+                    <ol>
+                        <li>Follow this link to the <a href="https://www.freecodecamp.org/" target="_blank">freecodecamp</a> website.</li>
+                        <li>Sign up: Click on the "Sign in / Sign up" button at the top right corner of the page, then follow the prompts to create an account.</li>
+                        <li>Complete the curriculum: Once signed in, you can start learning by completing the interactive coding challenges and projects available on the platform.</li>
+                        <li>Get certified: FreeCodeCamp offers free certifications in various programming disciplines. Work through the curriculum to earn certifications that can boost your resume.</li>
+                        <li>Connect with the community: Join forums, chat rooms, and social media groups associated with FreeCodeCamp to connect with other learners and mentors.</li>
+                    </ol>
+                </div>
+                <button onclick="nextStep()">Finish</button>
+            </div>
+            
+            <div id="step11" class="step">
+                <h2>Congratulations! You've completed the onboarding process.</h2>
+                <p>You're all set to start coding!</p>
+                <p>Feel free to delete the 'Onboarding' folder now.</p>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
